@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>shaila</h1>
+    <h1>Aputher: {{aouthor}} </h1>
+    <h1>Age: {{Age}} </h1>
+    <h1>List:{{list}} </h1>
+    <h1>{{ lst | join:" - " }}</h1>
+   <h1> {{ Birthday | date:"D d M Y" }}</h1>
+   <h1>{{ Birthday|date:"SHORT_DATE_FORMAT" }} </h1>
+   <h1>{{ 20 | add:"5" }}</h1>
+   {{ 'hodan'| capfirst }}<br>
+   {{ "January - February - March" | cut:" " }}
+   <h1>{{ course| dictsort:"Name" }}</h1>
+   {{  furits | first }} <br>
+ <h1> {{  furits | last }}</h1>
+ <h1> {{ furits | length }}</h1>
+ {{ 'HAPPY CODING'| lower }}
+ {{ 'HAPPY CODING'| upper }}<br>
+ {{ 'HAPPY CODING' | title }}
+ {{ list | slice:":2" }}
+ {{ 'Abdullah Hodan is  a good boy' | truncatechars:7 }}
+
+    {% for i in course %}
+    <h1>{{i.Id}}. {{i.Name}} {{i.Fee}}</h1>
+    {%endfor%}
+    {% if Age >= 20 %}
+    <h1>You will get a license</h1>
+     {% elif Age >= 10 and Age <= 19 %}
+    <h1>You will not get a license</h1>
+    {%else%}
+    <h1>You are a bacca</h1>
+    {% endif %}
+
+    
+</body>
+</html>
